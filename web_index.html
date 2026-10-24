@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Browser settings: text encoding, phone screen sizing, and SEO details -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#282826">
+  <meta name="description" content="Jackson Street Coffee & Market">
+  <!-- Name shown on the browser tab -->
+  <title>Jackson Street | Coffee & Market</title>
+  <!-- Fonts: loaded from Google Fonts for headlines and body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+  <!-- CSS: Controls the colors, fonts, section layout, and mobile sizes (see styles.css) -->
+  <link rel="stylesheet" href="web_styles.css">
+</head>
+
+<!-- HTML: All of the content that visitors see on the website -->
+<body>
+
+ <!-- ===== WEBSITE HEADER AND NAVIGATION =====
+          The logo, links to each page section, Toast ordering button, and mobile menu.
+ -->
+    <header class="site-header" id="top">
+      <div class="wrap header-inner">
+        <a aria-label="Jackson Street homepage" class="brand" href="#home">
+          <img class="brand-mark" src="assets/Logo 1.png" alt="Jackson St logo">
+          <span>
+            <span class="brand-name">Jackson St .</span>
+            <span class="brand-caption">COFFEE &amp; GATHERINGS</span>
+          </span>
+        </a>
+        <nav aria-label="Main navigation" class="site-nav" id="site-nav">
+          <a href="#story">Our story</a>
+          <a href="#coffee">Coffee &amp; more</a>
+          <a href="#events">Events</a>
+          <a href="#visit">Visit</a>
+        </nav>
+        <div class="header-actions">
+          <a aria-label="Order coffee through Toast (opens in a new tab)" class="bag-button toast-order-link" href="#coffee" rel="noopener noreferrer" target="_blank">
+            <span>Order </span>
+            <span aria-hidden="true">↗</span>
+          </a>
+          <button aria-controls="site-nav" aria-expanded="false" aria-label="Toggle menu" class="mobile-toggle" id="mobile-toggle">☰</button>
+        </div>
+      </div>
+    </header>
+
+ <!-- ===== MAIN WEBSITE CONTENT =====
+          The main body of the website begins here.
+ -->
+    <main>
+
+  <!-- ===== HOME / HERO SECTION =====
+            Welcome headline, short introduction, ordering button, and coffee image.
+  -->
+      <section aria-labelledby="hero-title" class="hero" id="home">
+        <div class="hero-copy">
+          <div class="eyebrow">Welcome to Jackson Street</div>
+          <h1 id="hero-title">
+            Great food,
+            <br/>
+            Even better
+            <br/>
+            <em>Coffee!</em>
+          </h1>
+          <p class="hero-lead">Welcoming coffee shop and market serving fresh breakfast and lunch in a unique, revitalized building.</p>
+          <div class="hero-buttons">
+            <a class="btn btn-dark toast-order-link" href="#coffee" rel="noopener noreferrer" target="_blank">
+              Order
+              <span aria-hidden="true">↗</span>
+            </a>
+            <a class="text-link" href="#story">Discover our story &nbsp; ↗</a>
+          </div>
+        </div>
+        <div class="Show Inside">
+          <img src="assets/Inside-2.jpg"/>
+
+          </div>
+        </div>
+      </section>
+
+
+  <!-- ===== BUILDING HISTORY / OUR STORY =====
+            Placeholder text and a building illustration; replace these with the real history.
+  -->
+      <section aria-labelledby="story-title" class="section" id="story">
+        <div class="wrap story-grid">
+          <div class="story-frame">
+            <img alt="Illustration representing the history of the building" loading="lazy" src="assets/Outside-2.jpg"/>
+            <div class="story-note">
+              <span>Then, now, &amp; next</span>
+              <strong>Every place has a story.</strong>
+            </div>
+          </div>
+          <div class="story-copy">
+            <div class="section-tag">01 / The story behind the grounds </div>
+            <h2 id="story-title">
+              History.
+              <br/>
+              <em>In the making.</em>
+            </h2>
+            <p class="body-copy">Some places are more than four walls. They hold memories, bring people together, and make room for new beginnings. We want this space to honor the building’s past while welcoming everything still to come.</p>
+            <p class="body-copy">Its full history and original photographs will be added here as the story is shared with us.</p>
+            <div class="story-points">
+              <div class="story-point">
+                <span>01</span>
+                A celebration of the building's character
+              </div>
+              <div class="story-point">
+                <span>02</span>
+                A warm space for coffee and conversation
+              </div>
+              <div class="story-point">
+                <span>03</span>
+                New memories in a meaningful place
+              </div>
+            </div>
+            <a class="btn btn-outline" href="#events">
+              What happens here
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+  <!-- ===== COFFEE MENU =====
+            Filter buttons and an empty product container filled by JavaScript.
+  -->
+      <section aria-labelledby="menu-title" class="section menu-section" id="coffee">
+        <div class="wrap">
+          <div class="menu-header">
+            <div>
+              <div class="section-tag">02 / Crafted for your everyday</div>
+              <h2 id="menu-title">
+                Something good
+                <br/>
+                is
+                <em>brewing.</em>
+              </h2>
+            </div>
+            <p class="menu-intro">Morning pick-me-ups. Afternoon favorites. Little treats to go with your cup. Find something to love.</p>
+          </div>
+          <!-- Category filter buttons: clicking one changes which sample drinks show -->
+          <div aria-label="Filter menu items" class="filters" role="group">
+            <button aria-pressed="true" class="filter active" data-category="all" type="button">All favorites</button>
+            <button aria-pressed="false" class="filter" data-category="espresso" type="button">Espresso</button>
+            <button aria-pressed="false" class="filter" data-category="cold" type="button">Cold coffee</button>
+            <button aria-pressed="false" class="filter" data-category="more" type="button">More to love</button>
+          </div>
+          <!-- Sample drink cards are generated here by JavaScript -->
+          <div aria-live="polite" class="products" id="products">
+          </div>
+
+      <!-- ===== TOAST ONLINE ORDERING =====
+                Customers open Toast to see the real menu and complete checkout.
+      -->
+          <div class="toast-order-banner">
+            <div>
+              <h3>Craving something good?</h3>
+              <p>Explore the full, current menu and place your order securely with Toast. Pickup and delivery options depend on the café's Toast settings.</p>
+              <p class="toast-order-status" id="toast-order-status" role="status">Preview only — Toast ordering link has not been connected yet.</p>
+            </div>
+            <a class="btn btn-light toast-order-link" href="#coffee" rel="noopener noreferrer" target="_blank">
+              Order with Toast
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <p class="menu-note">Concept menu shown for design purposes only. Prices, availability, item customizations and checkout are managed in Toast, not on this page.</p>
+        </div>
+      </section>
+
+  <!-- ===== EVENTS =====
+            Cards promoting gatherings and a button for the inquiry form.
+  -->
+      <section aria-labelledby="events-title" class="section events" id="events">
+        <div class="wrap">
+          <div class="events-header">
+            <div class="section-tag">03 / Beyond the coffee</div>
+            <h2 id="events-title">
+              There's always room
+              <br/>
+              to
+              <em>come together.</em>
+            </h2>
+            <p>From intimate celebrations to community moments, this is a place to connect. Explore what the space could hold.</p>
+          </div>
+          <div class="event-grid">
+            <article class="event-card">
+              <span class="event-num">01 /</span>
+              <h3>Private Gatherings</h3>
+              <p>A special setting for birthdays, showers, and meaningful occasions with your favorite people.</p>
+              <a href="#events" id="open-wedding-modal">
+                Plan an event
+                <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+            <article class="event-card">
+              <span class="event-num">02 /</span>
+              <h3>Community Events</h3>
+              <p>Good company, fresh connections, and little moments that bring the neighborhood together.</p>
+              <a href="#events" id="open-community-modal">
+                Explore possibilities
+                <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+            <article class="event-card">
+              <span class="event-num">03 /</span>
+              <h3>Something Special</h3>
+              <p>Pop-ups, workshops, and creative ideas. Actual event dates and details will appear here once announced.</p>
+              <a href="#events" id="open-special-modal">
+                Get in touch
+                <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+          </div>
+          <div class="event-banner">
+            <div>
+              <h3>Have a gathering in mind?</h3>
+              <p>Tell us what you're imagining. We'll help you get the conversation started.</p>
+            </div>
+            <button class="btn" id="event-inquiry" type="button">
+              Create event inquiry
+              <span aria-hidden="true">↗</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+
+ <!-- ===== FOOTER =====
+          Quick links and copyright notice at the bottom of the website.
+ -->
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-top">
+          <div>
+            <a aria-label="Back to homepage" class="brand" href="#home">
+              <img class="brand-mark" src="assets/Logo 1.png" alt="Jackson St logo">
+              <span>
+                <span class="brand-name">Jackson Street</span>
+                <span class="brand-caption">COFFEE &amp; Market</span>
+              </span>
+            </a>
+            <!-- Click the address to open Google Maps directions -->
+            <p class="footer-blurb">
+              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=711+W+Jackson+St%2C+El+Campo%2C+TX+77437" target="_blank" rel="noopener noreferrer">711 W Jackson St, El Campo, TX 77437</a>
+            </p>
+            <p class="footer-blurb">Monday - Thursday 6:00 AM–6:00 PM </p>
+            <p class="footer-blurb">Friday 6:00 AM–1:00 PM </p>
+
+
+
+
+          </div>
+          <div>
+            <h4>Explore</h4>
+            <div class="footer-links">
+              <a href="#story">Our Story</a>
+              <a href="#coffee">Coffee &amp; More</a>
+              <a class="toast-order-link" href="#coffee" rel="noopener noreferrer" target="_blank">Order ↗</a>
+              <a href="#events">Events</a>
+              <a href="#visit">Visit Us</a>
+            </div>
+          </div>
+          <div>
+            <h4>Stay in the know</h4>
+            <div class="footer-links">
+              <span>Events &amp; community updates</span>
+              <span>Details coming soon</span>
+              <a href="#top">Back to top ↑</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>
+            ©
+            <span id="year">
+            </span>
+            Jackson Street Coffee and Market
+          </span>
+          <span>WEBSITE CONCEPT · MENU, EVENTS &amp; CONTACT DETAILS ARE PLACEHOLDERS.</span>
+        </div>
+      </div>
+    </footer>
+
+ <!-- ===== EVENT INQUIRY POPUP =====
+          Hidden until the visitor clicks Create event inquiry; it makes a copyable draft.
+ -->
+    <div aria-hidden="true" aria-labelledby="modal-heading" aria-modal="true" class="modal" id="modal" role="dialog">
+      <div class="modal-panel">
+        <div class="modal-title">
+          <h2 id="modal-heading">Event inquiry</h2>
+          <button aria-label="Close dialog" class="icon-close" id="close-modal" type="button">×</button>
+        </div>
+        <p id="modal-description">Draft a message about your event and copy it for future use. A real contact method will be added when confirmed.</p>
+        <label class="field-label" for="order-name" id="name-label">Your name (optional)</label>
+        <input autocomplete="name" id="order-name" maxlength="80" placeholder="Your name"/>
+        <label class="field-label" for="order-notes" id="notes-label">Tell us about your event</label>
+        <textarea id="order-notes" maxlength="500" placeholder="Type of event, guest count, date ideas…"></textarea>
+        <button class="btn btn-dark" id="copy-summary" type="button">
+          Copy event inquiry
+          <span aria-hidden="true">↗</span>
+        </button>
+        <p class="fineprint">This is a draft only. No message is sent automatically.</p>
+      </div>
+    </div>
+
+ <!-- ===== WEDDING PACKAGES POPUP MODAL ===== -->
+    <div aria-hidden="true" aria-labelledby="wedding-modal-heading" class="modal" id="wedding-modal" role="dialog">
+      <div class="modal-panel" style="max-width: 680px;">
+        <div class="modal-title">
+          <h2 id="wedding-modal-heading">Wedding Packages</h2>
+          <button aria-label="Close dialog" class="icon-close" id="close-wedding-modal" type="button">×</button>
+        </div>
+        <p>Jackson St. ft. SUGAR² — Venue Pricing &amp; Details</p>
+        
+        <div style="margin: 20px 0; text-align: left; font-size: 13px; line-height: 1.6;">
+          <div style="padding: 12px 0; border-bottom: 1px solid var(--line);">
+            <strong style="font-size: 15px; color: var(--black);">Intimate Wedding — $2,750</strong>
+            <p style="margin: 4px 0 0; color: var(--text-soft);">Up to 75 guests; contracted event space; access beginning at 9:00 a.m.; event ending by 11:00 p.m.; property cleared by midnight; bridal suite; venue attendant.</p>
+          </div>
+
+          <div style="padding: 12px 0; border-bottom: 1px solid var(--line);">
+            <strong style="font-size: 15px; color: var(--black);">Classic Wedding — $3,650</strong>
+            <p style="margin: 4px 0 0; color: var(--text-soft);">Up to 150 guests; both sides; 12 hours; bridal suite; two attendants; one-hour ceremony rehearsal before the wedding day, subject to availability and confirmation policy.</p>
+          </div>
+
+          <div style="padding: 12px 0; border-bottom: 1px solid var(--line);">
+            <strong style="font-size: 15px; color: var(--black);">Signature Wedding — $4,250</strong>
+            <p style="margin: 4px 0 0; color: var(--text-soft);">Reception for approved full capacity (currently capped at 250), or ceremony and reception with a room flip; both sides; bridal suite; 12 hours; final timeline review.</p>
+          </div>
+
+          <div style="padding: 12px 0; border-bottom: 1px solid var(--line);">
+            <strong style="font-size: 15px; color: var(--black);">Coordinated Wedding — $5,150+</strong>
+            <p style="margin: 4px 0 0; color: var(--text-soft);">Selected Jackson St. wedding venue package plus professional wedding day-of coordination. Final price depends on venue package, guest count, timeline, and complexity.</p>
+          </div>
+
+          <div style="padding: 12px 0; border-bottom: 1px solid var(--line);">
+            <strong style="font-size: 15px; color: var(--black);">Curated Full-Service Wedding — $8,500+</strong>
+            <p style="margin: 4px 0 0; color: var(--text-soft);">Venue rental, professional day-of coordination, selected in-house bar package, catering, and dessert service. Final price is based on guest count and per-person selections.</p>
+          </div>
+
+          <div style="margin-top: 16px; padding: 12px; background: var(--milk); border: 1px solid var(--beige);">
+            <strong style="color: var(--brown);">Wedding Weekend Upgrade — $1,500+</strong>
+            <p style="margin: 4px 0 0; font-size: 12px; color: var(--text-soft);">Add Friday access to a Saturday wedding for approved setup, standard rehearsal-dinner layout, ceremony rehearsal, and approved overnight décor storage. Day-before access is subject to availability and confirmed 21 days before the wedding.</p>
+          </div>
+        </div>
+
+        <button class="btn btn-dark" id="wedding-inquiry-btn" type="button">
+          Create Event Inquiry
+          <span aria-hidden="true">↗</span>
+        </button>
+      </div>
+    </div>
+
+ <!-- ===== COMMUNITY EVENTS POPUP MODAL ===== -->
+    <div aria-hidden="true" aria-labelledby="community-modal-heading" class="modal" id="community-modal" role="dialog">
+      <div class="modal-panel" style="max-width: 680px;">
+        <div class="modal-title">
+          <h2 id="community-modal-heading">Community &amp; Social Rentals</h2>
+          <button aria-label="Close dialog" class="icon-close" id="close-community-modal" type="button">×</button>
+        </div>
+        <p>Monday–Thursday hourly options and weekend social celebration rates.</p>
+        
+        <div style="margin: 20px 0; text-align: left; font-size: 13px; line-height: 1.6;">
+          <h3 style="font-size: 16px; color: var(--brown); margin-bottom: 8px;">Monday–Thursday Rentals</h3>
+          <p style="font-size: 12px; color: var(--text-soft); margin-bottom: 12px;">Available 7:00 a.m.–6:00 p.m. on the events side while the restaurant side is open. Meetings require a two-hour minimum; social events require a three-hour minimum. Both-side rentals are available from 6:00 p.m. until 10:00 p.m.</p>
+          <ul style="padding-left: 16px; margin-bottom: 20px; color: var(--text-soft);">
+            <li><strong>Meeting, up to 25:</strong> $75/hour (2hr min, One Side: $150)</li>
+            <li><strong>Meeting, 26–75:</strong> $100/hour (2hr min, One Side: $200)</li>
+            <li><strong>Meeting, 76–150:</strong> $125/hour (2hr min, One Side: $250)</li>
+            <li><strong>Social event, up to 50:</strong> $125/hour (3hr min, One Side: $375, Both Sides: $725)</li>
+            <li><strong>Social event, 51–100:</strong> $150/hour (3hr min, One Side: $450, Both Sides: $850)</li>
+            <li><strong>Social event, 101–150:</strong> $175/hour (3hr min, One Side: $525, Both Sides: $975)</li>
+          </ul>
+
+          <h3 style="font-size: 16px; color: var(--brown); margin-bottom: 8px;">Friday–Sunday Social Celebrations</h3>
+          <p style="font-size: 12px; color: var(--text-soft); margin-bottom: 12px;">For birthdays, showers, anniversaries, graduations, reunions, engagement parties, and similar celebrations.</p>
+          <ul style="padding-left: 16px; color: var(--text-soft);">
+            <li><strong>2 hours:</strong> One Side: $350 | Both Sides: $600</li>
+            <li><strong>3 hours:</strong> One Side: $475 | Both Sides: $800</li>
+            <li><strong>5 hours:</strong> One Side: $750 | Both Sides: $1,500</li>
+            <li><strong>8 hours:</strong> One Side: $1,100 | Both Sides: $1,700</li>
+            <li><strong>12 hours:</strong> One Side: $1,500 | Both Sides: $2,300</li>
+            <li><strong>Additional hour:</strong> One Side: $175 | Both Sides: $250</li>
+          </ul>
+        </div>
+
+        <button class="btn btn-dark" id="community-inquiry-btn" type="button">
+          Create Event Inquiry
+          <span aria-hidden="true">↗</span>
+        </button>
+      </div>
+    </div>
+
+ <!-- ===== SOMETHING SPECIAL / POLICIES POPUP MODAL ===== -->
+    <div aria-hidden="true" aria-labelledby="special-modal-heading" class="modal" id="special-modal" role="dialog">
+      <div class="modal-panel" style="max-width: 680px;">
+        <div class="modal-title">
+          <h2 id="special-modal-heading">Booking Options &amp; Policies</h2>
+          <button aria-label="Close dialog" class="icon-close" id="close-special-modal" type="button">×</button>
+        </div>
+        <p>Explore our booking methods, à-la-carte services, security requirements, and guidelines.</p>
+        
+        <div style="margin: 20px 0; text-align: left; font-size: 13px; line-height: 1.6;">
+          <h3 style="font-size: 16px; color: var(--brown); margin-bottom: 8px;">Three Ways to Book</h3>
+          <ul style="padding-left: 16px; margin-bottom: 20px; color: var(--text-soft);">
+            <li><strong>Venue Only:</strong> Hire approved outside vendors. Includes contracted space, tables/chairs, standard layout, and venue attendant.</li>
+            <li><strong>À La Carte:</strong> Add only the venue services you need (coordination, bar, setup, kitchen access).</li>
+            <li><strong>Curated Full-Service:</strong> Receive one organized proposal combining venue, coordination, bar package, and catering.</li>
+          </ul>
+
+          <h3 style="font-size: 16px; color: var(--brown); margin-bottom: 8px;">Key Services &amp; Fees</h3>
+          <ul style="padding-left: 16px; margin-bottom: 20px; color: var(--text-soft);">
+            <li><strong>Cleaning:</strong> Ranges from $100 (one side, up to 50 guests) to $300 (both sides, 151–250 guests).</li>
+            <li><strong>Security:</strong> Determined by guest count and alcohol service (billed at cost plus 15% administration fee).</li>
+            <li><strong>Important Notes:</strong> A 25% nonrefundable booking retainer is required. All alcohol and bar service are venue-exclusive.</li>
+          </ul>
+        </div>
+
+        <button class="btn btn-dark" id="special-inquiry-btn" type="button">
+          Create Event Inquiry
+          <span aria-hidden="true">↗</span>
+        </button>
+      </div>
+    </div>
+
+ <!-- ===== NOTIFICATION MESSAGE =====
+          A temporary popup message such as Toast ordering not connected.
+ -->
+    <div aria-live="polite" class="toast" id="toast" role="status">
+    </div>
+
+
+  <!-- JavaScript: Menu filters, Toast ordering, event inquiry, and mobile navigation -->
+  <script src="script.js"></script>
+</body>
+</html>
